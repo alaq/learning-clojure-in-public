@@ -9,7 +9,7 @@ If you would like to read why I am doing this, read the [[file:posts/2020-06-18.
 
 When I announced this on [[https://twitter.com/adrien/status/1273013237076971528][Twitter]] I got an interesting suggestion:
 
-[[./posts/images/lisankie-inspiration.png]]
+#+html: <p align="center"><img src="posts/images/lisankie-inspiration.png" /></p>
 
 So here it goes: if I miss a day, you will be able ask me to send you $5 (Venmo or PayPal
 preferred). If by the next morning
