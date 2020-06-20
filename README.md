@@ -6,7 +6,7 @@
 
 I am challenging myself to learn Clojure in public. Starting on July 22nd, 2020 and for the next five weeks I will be learning Clojure in public and you can hold me accountable. I am committing the code I am writing to the `./code` folder, and will also write daily posts detailing what I learned and what I did to learn it.
 
-If you would like to read why I am doing this, read the [introduction](posts/2020-06-18.org).
+If you would like to read why I am doing this, read the [introduction](posts/2020-06-18.md).
 
 When I announced this on [Twitter](https://twitter.com/adrien/status/1273013237076971528) I got an interesting suggestion:
 
