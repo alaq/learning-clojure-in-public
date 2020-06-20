@@ -12,7 +12,7 @@ When I announced this on [Twitter](https://twitter.com/adrien/status/12730132370
 
 <p align="center"><img src="posts/images/lisankie-inspiration.png" /></p>
 
-So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo or PayPal preferred). If by the next morning (I often work late) I have not updated this repository with the previous' day's progress you can claim it by reaching out to [me on Twitter](https://twitter.com/alaq). There is a limit of five people per missed post.
+So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo or PayPal preferred). If by the next morning (I often work late) I have not updated this repository with the previous' day's progress you can claim it by reaching out to [me on Twitter](https://twitter.com/adrien). There is a limit of five people per missed post.
 
 | Post | Date            | Topics                                                                                   |
 | ---- | --------------- | ---------------------------------------------------------------------------------------- |
