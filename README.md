@@ -1,5 +1,6 @@
 <p align="center">
-    <img src="posts/images/Clojure_logo.svg" />
+    <img src="posts/images/Clojure_logo.svg" /><br />
+    <img src="https://img.shields.io/badge/4clojure-5%20out%20of%20154-green?logo=clojure&style=flat" />
 </p>
 
 # Learning Clojure in Public
@@ -14,6 +15,7 @@ When I announced this on [Twitter](https://twitter.com/adrien/status/12730132370
 
 So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo or PayPal preferred). If by the next morning (I often work late) I have not updated this repository with the previous' day's progress you can claim it by reaching out to [me on Twitter](https://twitter.com/adrien). There is a limit of five people per missed post.
 
-| Post | Date            | Topics                                                                                   |
-| ---- | --------------- | ---------------------------------------------------------------------------------------- |
-| 0    | June 18th, 2020 | [Why am I doing this, why Clojure, environment setup, and the REPL](posts/2020-06-18.md) |
+| Post | Date            | Topics                                                                                         |
+| ---- | --------------- | ---------------------------------------------------------------------------------------------- |
+| 0    | June 18th, 2020 | [Why am I doing this, why Clojure, environment setup, and the REPL](posts/2020-06-18.md)       |
+| 1    | June 22nd, 2020 | [ClojureFam kickoff and types (Clojure from the Ground Up Chapter 1 & 2)](posts/2020-06-22.md) |
