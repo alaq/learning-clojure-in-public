@@ -1,6 +1,7 @@
 <p align="center">
-    <img src="posts/images/Clojure_logo.svg" /><br />
-    <img src="https://img.shields.io/badge/4clojure-5%20out%20of%20154-green?logo=clojure&style=flat" />
+    <img src="posts/images/Clojure_logo.svg" /><br /><br />
+    <img src="https://img.shields.io/badge/4clojure-20%20out%20of%20154-green?logo=clojure&style=flat" />
+    <img src="https://img.shields.io/badge/Clojure%20from%20the%20Ground%20Up-2%20out%20of%2010-green?logo=clojure&style=flat" />
 </p>
 
 # Learning Clojure in Public
