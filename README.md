@@ -20,3 +20,4 @@ So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo
 | ---- | --------------- | ---------------------------------------------------------------------------------------------- |
 | 0    | June 18th, 2020 | [Why am I doing this, why Clojure, environment setup, and the REPL](posts/2020-06-18.md)       |
 | 1    | June 22nd, 2020 | [ClojureFam kickoff and types (Clojure from the Ground Up Chapter 1 & 2)](posts/2020-06-22.md) |
+| 2    | June 23nd, 2020 | [Functions (Clojure from the Ground Up Chapter 3)](posts/2020-06-23.md)                        |

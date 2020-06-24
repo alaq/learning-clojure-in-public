@@ -120,3 +120,66 @@ true
 ```clojure
 (fn penultimate [x] (nth x (- (count x) 2)))
 ```
+
+## 21 Nth Element
+
+### Recursive solution
+
+```clojure
+(fn nthel [l n]
+    (if (= n 0)
+        (first l)
+        (nthel (rest l) (dec 1))))
+```
+
+### Non recursive solution
+
+```clojure
+(fn nthel [l n]
+    ((vec l) n))
+```
+
+## 22 Count a Sequence
+
+```clojure
+(fn cnt [lst]
+    (if (= lst nil)
+        0
+        (inc (cnt (next lst)))))
+```
+
+## 23 Reverse a Sequence
+
+```clojure
+(fn rev [coll]
+    (if (empty? coll)
+        []
+        (conj (rev (rest coll)) (first coll))))
+```
+
+## 24 Sum It All Up
+
+```clojure
+(fn siap [l]
+    (if (empty? l)
+        0
+        (+ (first l) (siap (rest l)))))
+```
+
+## 35 Local Bindings
+
+```clojure
+7
+```
+
+## 36 Let it Be
+
+```clojure
+[x 7 y 3 z 1]
+```
+
+## 37 Regular Expressions
+
+```clojure
+"ABC"
+```

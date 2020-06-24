@@ -57,3 +57,21 @@ but also appends an element to a vector or add to a set (they are unordered anyw
 -   `assoc` lets you add a key and a value to a map
 -   `merge` will merge maps
 -   `dissoc` will remove a value from a map
+-   `let` to declare a symbol locally (within its expression)
+-   `def` to declare a mutable variable
+-   `fn` to declare a function
+-   `defn` to declare a named function
+-   `doc` to access the docstring of a function
+-   `meta` to access the metadata of a function
+-   `supers` returns a set of all the types that include a specific type
+
+```clojure
+ user=> (supers (type type))
+#{clojure.lang.AFunction clojure.lang.IMeta java.util.concurrent.Callable clojure.lang.Fn clojure.lang.AFn java.util.Comparator java.lang.Object clojure.lang.RestFn clojure.lang.IObj java.lang.Runnable java.io.Serializable clojure.lang.IFn}
+```
+
+-   `fn?` returns whether the argument is a function or not
+-   `source` retrieves the source code of a function
+-   `empty?` returns true if a collection is empty
+-   `cons` will return a list made of the first argument, and all the elements in the second argument
+-   `if` will take a condition, then an expression to evaluate if it's true, and one if it isn't
