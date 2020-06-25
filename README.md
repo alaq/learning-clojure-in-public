@@ -1,7 +1,7 @@
 <p align="center">
     <img src="posts/images/Clojure_logo.svg" /><br /><br />
-    <img src="https://img.shields.io/badge/4clojure-43%20out%20of%20156-green?logo=clojure&style=flat" />
-    <img src="https://img.shields.io/badge/Clojure%20from%20the%20Ground%20Up-4%20out%20of%2010-green?logo=clojure&style=flat" />
+    <img src="https://img.shields.io/badge/4clojure-46%20out%20of%20156-green?logo=clojure&style=flat" />
+    <img src="https://img.shields.io/badge/Clojure%20from%20the%20Ground%20Up-4%20out%20of%209-green?logo=clojure&style=flat" />
 </p>
 
 # Learning Clojure in Public
@@ -20,5 +20,6 @@ So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo
 | ---- | --------------- | ---------------------------------------------------------------------------------------------- |
 | 0    | June 18th, 2020 | [Why am I doing this, why Clojure, environment setup, and the REPL](posts/2020-06-18.md)       |
 | 1    | June 22nd, 2020 | [ClojureFam kickoff and types (Clojure from the Ground Up Chapter 1 & 2)](posts/2020-06-22.md) |
-| 2    | June 23nd, 2020 | [Functions (Clojure from the Ground Up Chapter 3)](posts/2020-06-23.md)                        |
-| 3    | June 24nd, 2020 | [Manipulating sequences (Clojure from the Ground Up Chapter 4)](posts/2020-06-24.md)           |
+| 2    | June 23rd, 2020 | [Functions (Clojure from the Ground Up Chapter 3)](posts/2020-06-23.md)                        |
+| 3    | June 24th, 2020 | [Manipulating sequences (Clojure from the Ground Up Chapter 4)](posts/2020-06-24.md)           |
+| 4    | June 25th, 2020 | [Intro to state and concurrency (Clojure from the Ground Up Chapter 6)](posts/2020-06-25.md)   |
