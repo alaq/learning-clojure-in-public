@@ -166,6 +166,41 @@ true
         (+ (first l) (siap (rest l)))))
 ```
 
+## 25 Find the odd numbers
+
+```clojure
+(fn [xs] (filter odd? xs))
+```
+
+## 26 Fibonacci Sequence
+
+```clojure
+(fn [n]
+    (if (= n 0)
+        []
+        (if (= n 1)
+            [1]
+            (last (take (dec n) (iterate
+                (fn [xs] (conj xs (+ (last xs) (nth xs (- (count xs) 2)))))
+                [1 1]))))))
+```
+
+## 27 Palindrome Detector
+
+```clojure
+(fn [xs]
+  (if (string? xs)
+    (= (apply str (reverse xs) xs))
+    (= (reverse xs) xs)))
+```
+
+## 29 Get the Caps
+
+```clojure
+(fn [string]
+  (apply str (filter #(Character/isUpperCase %) string)))
+```
+
 ## 35 Local Bindings
 
 ```clojure
@@ -182,4 +217,79 @@ true
 
 ```clojure
 "ABC"
+```
+
+## 38 Maximum value
+
+```clojure
+(fn [& xs]
+  (reduce (fn [mx e] (if (pos? (- mx e)) mx e)) xs))
+```
+
+## 52 Intro to Destructuring
+
+```clojure
+[c e]
+```
+
+## 57 Simple Recursion
+
+```clojure
+'(5 4 3 2 1)
+```
+
+## 64 Intro to Reduce
+
+```clojure
++
+```
+
+## 68 Recurring Theme
+
+```clojure
+[7 6 5 4 3]
+```
+
+## 71 Rearranging Code: ->
+
+```clojure
+count
+```
+
+## 72 Rearranging Code: ->>
+
+```clojure
+reduce +
+```
+
+## 134 A nil key
+
+```clojure
+(fn [ky mp]
+  (=  (get mp ky :not-here) nil))
+```
+
+## 145 For the win
+
+```clojure
+'(1 5 9 13 17 21 25 29 33 37)
+```
+
+## 156 Map Defaults
+
+```clojure
+(fn [default xs]
+  	(reduce (fn [v x] (into v [[x default]])) {} xs))
+```
+
+## 161 Subset and Superset
+
+```clojure
+#{1 2}
+```
+
+## 162 Logical falsity and truth
+
+```clojure
+1
 ```

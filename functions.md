@@ -75,3 +75,65 @@ but also appends an element to a vector or add to a set (they are unordered anyw
 -   `empty?` returns true if a collection is empty
 -   `cons` will return a list made of the first argument, and all the elements in the second argument
 -   `if` will take a condition, then an expression to evaluate if it's true, and one if it isn't
+
+-   `if` will take a condition, then an expression to evaluate if it's true, and one if it isn't
+-   `keyword` takes a string and returns a keyword
+-   `map` takes a function and a sequence, it applies the the function to every member of the sequence. It can also take more sequences, and will take an member from each sequence each time and pass it to the function (which should take these arguments). If one sequence is shorter than others, `map` will stop at the last element of that sequence.
+-   `map-indexed` passes the index first and the element of the sequence to the function it is passed
+-   `pos?` returns true if a number is positive
+-   `iterate` takes a function and a starting number and will run that function indefinitely, each time taking the result of the previous function call
+-   You can use `take` to limit the number of times the function is run. A good example would be `(take 10 (iterate inc 0))`
+-   `repeat` returns a sequence where every element is the same, it just takes that member to return
+-   `repeatedly` takes a function and returns a sequence of the result of these calls
+-   `rand` generates a number between 0 and 1
+-   `range` generates sequences of numbers between two points. With one argument (a number) it generates the sequences between 0 and that number. With two numbers as arguments, it will be between these two numbers. The last argument (optional) is the step.
+-   `cycle` extends a sequence by repeating it forever. Here as well you can limit it with `take`
+-   `concat` concatenate sequences together
+-   `interleave` will combine two sequences together, one element of each at a time
+-   `interpose` will add an element between every member of the sequence it is passed (member first argument, sequence second)
+-   `reverse` will reverse sequences
+-   `seq` breaks a sequence of characters
+-   `apply` and `str` together can rebuild a string from a sequence of character
+-   `shuffle` randomizes the members of a sequence
+-   `drop` removes the first n elements of a sequence
+-   `take-last`keeps the n elements at the end of the sequence
+-   `drop-last` removes the last n elements of a sequence
+-   `take-while` keeps the elements until it doesn't satisfy a condition anymore. `(take-while pos? [3 2 1 0 -1 -2 10])` will return `(3 2 1)`
+-   `drop-while` is the same as above with `drop`
+-   `split-at` will split a sequence at an index
+-   `split-with` will split where the function passed is no longer satisfied
+-   `filter` takes a condition like `pos?` (a function) and sequence, and filters depending on that condition (if it returns a truthy value)
+-   `remove` is the opposite of `filter`
+-   `partition` will take a number n and a sequence and return sequence grouped by n elements together
+-   `partition-by` takes a function and a sequence and will group depending on whether the function returns a truthy value or not
+-   `partition-all` will partition it all, maybe returning at shorter sequence at the end
+-   `frequencies` will count how many times an element appears in a sequence. `(frequencies [:meow :mrrrow :meow :meow])` will return `{:meow 3, :mrrrow 1}`
+-   `pprint` pretty print an object
+-   `group-by` group sequences by a function, for instance
+
+```clojure
+user=> (pprint (group-by :first [{:first "Li"    :last "Zhou"}
+                                 {:first "Sarah" :last "Lee"}
+                                 {:first "Sarah" :last "Dunn"}
+                                 {:first "Li"    :last "O'Toole"}])){"Li"    [{:last "Zhou", :first "Li"}   {:last "O'Toole", :first "Li"}],
+ "Sarah" [{:last "Lee", :first "Sarah"} {:last "Dunn", :first "Sarah"}]}
+```
+
+Note here that the keyword is used as a function
+
+-   `reduce` takes a function and will run it on the first two elements (unless you pass a starting value) and then run again on the result of that function and the next value.
+-   `reductions` does the same but returns a sequence will all the steps
+-   `into` reduces elements into a collection
+
+```clojure
+user=> (into {} [[:a 2] [:b 3]])
+{:a 2, :b 3}
+user=> (into (list) [1 2 3 4])
+(4 3 2 1)
+```
+
+Adding an element to a list appears at the end, so it reverses the list
+
+-   `reduced` lets you break out of reduce early
+-   `lazy-seq` defers the execution of what is in the expression to when it is needed
+-   `realized?` lets you figure out if a function is realized or not
