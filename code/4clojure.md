@@ -201,6 +201,25 @@ true
   (apply str (filter #(Character/isUpperCase %) string)))
 ```
 
+## 30 Compress a Sequence
+
+```clojure
+(fn [xs]
+  	(reduce
+    	(fn [v e]
+          (if
+            (= e (last v))
+            v
+            (conj v e)))
+                    [] xs))
+```
+
+## 32 Duplicate a sequence
+
+```clojure
+(fn [xs] (interleave xs xs))
+```
+
 ## 35 Local Bindings
 
 ```clojure
@@ -224,6 +243,12 @@ true
 ```clojure
 (fn [& xs]
   (reduce (fn [mx e] (if (pos? (- mx e)) mx e)) xs))
+```
+
+## 48 Intro to some
+
+```clojure
+6
 ```
 
 ## 52 Intro to Destructuring
