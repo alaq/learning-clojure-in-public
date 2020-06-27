@@ -24,3 +24,4 @@ So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo
 | 3    | June 24th, 2020 | [Manipulating sequences (Clojure from the Ground Up Chapter 4)](posts/2020-06-24.md)           |
 | 4    | June 25th, 2020 | [Intro to state and concurrency (Clojure from the Ground Up Chapter 6)](posts/2020-06-25.md)   |
 | 5    | June 26th, 2020 | [State and concurrency continued (Clojure from the Ground Up Chapter 6)](posts/2020-06-26.md)  |
+| 6    | June 27th, 2020 | [Project setup and exploring data (Clojure from the Ground Up Chapter 7)](posts/2020-06-27.md) |
