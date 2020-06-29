@@ -220,6 +220,14 @@ true
 (fn [xs] (interleave xs xs))
 ```
 
+## 34 Implement range
+
+```clojure
+(fn my-range [start end]
+  (if (= (inc start) end) (list start)
+  	(conj (my-range (inc start) end) start)))
+```
+
 ## 35 Local Bindings
 
 ```clojure
@@ -243,6 +251,21 @@ true
 ```clojure
 (fn [& xs]
   (reduce (fn [mx e] (if (pos? (- mx e)) mx e)) xs))
+```
+
+## 39 Interleave two sequence
+
+```clojure
+(fn my-interleave [v1 v2]
+  (when (and (first v1) (first v2))
+    (concat [(first v1) (first v2)] (my-interleave (rest v1) (rest v2)))))
+```
+
+## 42 Factorial fun
+
+```clojure
+(fn my-factorial [n]
+  (reduce * (range 1 (inc n))))
 ```
 
 ## 48 Intro to some

@@ -1,7 +1,7 @@
 <p align="center">
     <img src="posts/images/Clojure_logo.svg" /><br /><br />
-    <img src="https://img.shields.io/badge/4clojure-46%20out%20of%20156-green?logo=clojure&style=flat" />
-    <img src="https://img.shields.io/badge/Clojure%20from%20the%20Ground%20Up-5%20out%20of%209-green?logo=clojure&style=flat" />
+    <img src="https://img.shields.io/badge/4clojure-49%20out%20of%20156-green?logo=clojure&style=flat" />
+    <img src="https://img.shields.io/badge/Clojure%20from%20the%20Ground%20Up-6%20out%20of%209-green?logo=clojure&style=flat" />
 </p>
 
 # Learning Clojure in Public
@@ -25,3 +25,4 @@ So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo
 | 4    | June 25th, 2020 | [Intro to state and concurrency (Clojure from the Ground Up Chapter 6)](posts/2020-06-25.md)   |
 | 5    | June 26th, 2020 | [State and concurrency continued (Clojure from the Ground Up Chapter 6)](posts/2020-06-26.md)  |
 | 6    | June 27th, 2020 | [Project setup and exploring data (Clojure from the Ground Up Chapter 7)](posts/2020-06-27.md) |
+| 7    | June 28th, 2020 | [Exploring data and exercises (Clojure from the Ground Up Chapter 7)](posts/2020-06-28.md)     |
