@@ -1,12 +1,6 @@
-(ns scratch
-  .core)
-
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(ns scratch.core)
 
 (defn pow
-  "Raises base to the given power. For instance (pow 3 2) returns three squared, or nine."
+  "Raises base to the given power. For instance, (pow 3 2) returns three squared, or nine."
   [base power]
   (apply * (repeat power base)))
