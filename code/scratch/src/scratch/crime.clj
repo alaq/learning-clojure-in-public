@@ -29,5 +29,44 @@
        (take-last 10)
        (map (fn [county]
               [(fips (fips-code county))
-               (:driving_under_influence county)]))
+               [:duis (:driving_under_influence county)
+                :population (:county_population county)
+                :report-count (:grand_total county)
+                :prevalence (double (/ (:driving_under_influence county) (:county_population county)))]]))
        (into {})))
+
+
+(defn prevalence-of-duis
+  "Prevalence of DUIs."
+  [file]
+  (->> file
+       load-json
+       (map (fn [county]
+              {:county (fips (fips-code county))
+               :duis (:driving_under_influence county)
+               :population (:county_population county)
+               :prevalence (double (if
+                                    (pos? (:county_population county))
+                                     (/ (:driving_under_influence county) (:county_population county))
+                                     0))}))
+       (sort-by :prevalence)
+       (take-last 10)))
+
+(defn most-prevalent
+  "Given a JSON filename of UCR crime data for a particular year, and a crime, find the counties with the highest prevalence of this crime."
+  [file crime]
+  (->> file
+       load-json
+       (map (fn [county]
+              {:county (fips (fips-code county))
+               :occurrence (crime county)
+               :population (:county_population county)
+               :prevalence (double (if
+                                    (pos?
+                                     (:county_population county))
+                                     (/
+                                      (crime county)
+                                      (:county_population county))
+                                     0))}))
+       (sort-by :prevalence)
+       (take-last 10)))
