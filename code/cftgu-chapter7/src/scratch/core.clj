@@ -1,4 +1,5 @@
-(ns cftgu-chapter6.core)
+(ns scratch
+  .core)
 
 (defn foo
   "I don't do a whole lot."

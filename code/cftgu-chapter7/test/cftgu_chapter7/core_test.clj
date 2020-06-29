@@ -1,6 +1,8 @@
-(ns cftgu-chapter6.core-test
-  (:require [clojure.test :refer :all]
-            [cftgu-chapter6.core :refer :all]))
+(ns scratch
+  .core-test
+  (:require [clojure.test :refer [deftest is testing]]
+            [scratch
+             .core :refer [pow]]))
 
 (deftest a-test
   (testing "Numbers are equal to themselves."
