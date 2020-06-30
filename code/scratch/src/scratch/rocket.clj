@@ -52,17 +52,18 @@
                 (Math/pow (:z c) 2))))
 
 (defn cartesian->spherical
-  "Converts a map of Cartesian coordinates :x, :y, and :z to spherical coordinates :r, :theta, and :phi."
+  "Converts a map of Cartesian coordinates :x, :y, and :z to spherical
+  coordinates :r, :theta, and :phi."
   [c]
   (let [r (magnitude c)]
-    {:r r
-     :phi (Math/acos (/ (:z c) r))
+    {:r     r
+     :phi   (Math/acos (/ (:z c) r))
      :theta (Math/atan (/ (:y c) (:x c)))}))
 
 (defn spherical->cartesian
   "Converts spherical to Cartesian coordinates."
   [c]
-  {:x (* (:r c) (Math/sin (:theta c)) (Math/cos (:phi c)))
+  {:x (* (:r c) (Math/cos (:theta c)) (Math/sin (:phi c)))
    :y (* (:r c) (Math/sin (:theta c)) (Math/sin (:phi c)))
    :z (* (:r c) (Math/cos (:phi c)))})
 
@@ -141,3 +142,49 @@
          ; And our velocity changes based on our acceleration
          :velocity  (merge-with + (:velocity craft)
                                 (scale dt (acceleration craft)))))
+
+(defn trajectory
+  "Returns all future states of the craft, at dt-second intervals."
+  [dt craft]
+  (iterate #(step % 1) craft))
+
+(defn altitude
+  "The height above the surface of the equator, in meters."
+  [craft]
+  (-> craft
+      :position
+      cartesian->spherical
+      :r
+      (- earth-equatorial-radius)))
+
+(defn above-ground?
+  "Is the craft at or above the surface?"
+  [craft]
+  (<= 0 (altitude craft)))
+
+(defn flight
+  "The above-ground portion of a trajectory."
+  [trajectory]
+  (take-while above-ground? trajectory))
+
+(defn crashed?
+  "Does this trajectory crash into the surface before 100 hours are up?"
+  [trajectory]
+  (let [time-limit (* 100 3600)] ; 1 hour
+    (not (every? above-ground?
+                 (take-while #(<= (:time %) time-limit) trajectory)))))
+
+(defn crash-time
+  "Given a trajectory, returns the time the rocket impacted the ground."
+  [trajectory]
+  (:time (last (flight trajectory))))
+
+(defn apoapsis
+  "The highest altitude achieved during a trajectory."
+  [trajectory]
+  (apply max (map altitude trajectory)))
+
+(defn apoapsis-time
+  "The time of apoapsis"
+  [trajectory]
+  (:time (apply max-key altitude (flight trajectory))))

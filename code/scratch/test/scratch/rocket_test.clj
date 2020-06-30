@@ -1,6 +1,6 @@
 (ns scratch.rocket-test
   (:require [clojure.test :refer [deftest testing is]]
-            [scratch.rocket2 :refer [cartesian->spherical spherical->cartesian]]))
+            [scratch.rocket :refer [cartesian->spherical spherical->cartesian atlas-v prepare trajectory crashed? crash-time apoapsis apoapsis-time]]))
 
 (deftest spherical-coordinate-test
 
@@ -11,5 +11,18 @@
            {:x 0.0 :y 0.0 :z 2.0})))
 
   (testing "roundtrip"
-    (let [pos {:x 1 :y 2 :z 3}]
+    (let [pos {:x 1.0 :y 2.0 :z 3.0}]
       (is (= pos (-> pos cartesian->spherical spherical->cartesian))))))
+
+(deftest makes-orbit
+  (let [trajectory (->> (atlas-v)
+                        prepare
+                        (trajectory 1))]
+
+    (when (crashed? trajectory)
+      (println "Crashed at" (crash-time trajectory) "seconds")
+      (println "Maximum altitude" (apoapsis trajectory)
+               "meters at"        (apoapsis-time trajectory) "seconds"))
+
+    ; Assert that the rocket eventually made it to orbit.
+    (is (not (crashed? trajectory)))))
