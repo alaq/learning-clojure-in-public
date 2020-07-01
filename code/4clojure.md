@@ -194,6 +194,19 @@ true
     (= (reverse xs) xs)))
 ```
 
+## 28 Flatten a Sequence
+
+```clojure
+(fn my-flatten
+  [xs]
+  (if (empty? xs)
+    '()
+    (concat (if (coll? (first xs))
+              (my-flatten (first xs))
+              (list (first xs)))
+            (my-flatten (rest xs)))))
+```
+
 ## 29 Get the Caps
 
 ```clojure
@@ -214,10 +227,34 @@ true
                     [] xs))
 ```
 
+## 31 Pack a Sequence
+
+```clojure
+(fn [xs] (partition-by identity xs))
+```
+
 ## 32 Duplicate a sequence
 
 ```clojure
 (fn [xs] (interleave xs xs))
+```
+
+## 33 Replicate a Sequence
+
+My initial solution works locally in the REPL, but not on 4clojure. It may be because of 4clojure's clojure's version
+
+```clojure
+(fn replicate-a-sequence
+  [xs n]
+  (apply interleave (repeat n xs)))
+```
+
+This solutions passes all the test cases:
+
+```clojure
+(fn replicate-a-sequence
+  [xs n]
+  (mapcat (fn [e] (repeat n e)) xs))
 ```
 
 ## 34 Implement range
@@ -261,6 +298,18 @@ true
     (concat [(first v1) (first v2)] (my-interleave (rest v1) (rest v2)))))
 ```
 
+## 40 Interpose a Seq
+
+```clojure
+(fn [v xs] (drop-last (interleave xs (repeat (count xs) v))))
+```
+
+## 41 Drop Every Nth Item
+
+```clojure
+(fn drop-nth [xs n] (keep-indexed (fn [i e] (if (not= (mod (inc i) n) 0) e nil)) xs))
+```
+
 ## 42 Factorial fun
 
 ```clojure
@@ -268,10 +317,35 @@ true
   (reduce * (range 1 (inc n))))
 ```
 
+## 45 Intro to iterate
+
+```clojure
+'(1 4 7 10 13)
+```
+
+## 47 Contain Yourself
+
+```clojure
+4
+```
+
 ## 48 Intro to some
 
 ```clojure
 6
+```
+
+## 49 Split a sequence
+
+```clojure
+(fn [s xs]
+  [(take s xs) (drop s xs)])
+```
+
+## 51 Advanced Destructuring
+
+```clojure
+[1 2 3 4 5]
 ```
 
 ## 52 Intro to Destructuring
@@ -284,6 +358,12 @@ true
 
 ```clojure
 '(5 4 3 2 1)
+```
+
+## 61 Map Construction
+
+```clojure
+#(apply hash-map (interleave %1 %2))
 ```
 
 ## 64 Intro to Reduce
@@ -308,6 +388,16 @@ count
 
 ```clojure
 reduce +
+```
+
+## 83 A Half-Truth
+
+```clojure
+(fn half-truth [& args]
+  (cond
+    (every? true? args) false
+    (some true? args) true
+    :else false))
 ```
 
 ## 134 A nil key
