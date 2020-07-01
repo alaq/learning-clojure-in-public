@@ -1,6 +1,6 @@
 (ns scratch.rocket-test
   (:require [clojure.test :refer [deftest testing is]]
-            [scratch.rocket :refer [cartesian->spherical spherical->cartesian atlas-v prepare trajectory crashed? crash-time apoapsis apoapsis-time]]))
+            [scratch.rocket :refer [cartesian->spherical spherical->cartesian atlas-v prepare trajectory crashed? crash-time apoapsis apoapsis-time centaur]]))
 
 (deftest spherical-coordinate-test
 
@@ -15,7 +15,7 @@
       (is (= pos (-> pos cartesian->spherical spherical->cartesian))))))
 
 (deftest makes-orbit
-  (let [trajectory (->> (atlas-v)
+  (let [trajectory (->> (atlas-v (centaur))
                         prepare
                         (trajectory 1))]
 
