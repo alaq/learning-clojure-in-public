@@ -123,6 +123,7 @@
   [craft]
   (* (fuel-rate craft) (:isp craft)))
 
+
 (defn engine-force-old
   "The force vector, each component in Newtons, due to the rocket engine."
   [craft]
@@ -130,6 +131,12 @@
     {:x t
      :y 0
      :z 0}))
+
+(defn total-force
+  "Total force on a craft."
+  [craft]
+  (merge-with + (engine-force craft)
+              (gravity-force craft)))
 
 (defn map-values
   "Applies f to every value in the map m."
@@ -322,8 +329,3 @@
    :isp 3050
    :max-fuel-rate (/ 284450 253)
    :next-stage next-stage})
-
-
-
-
-
