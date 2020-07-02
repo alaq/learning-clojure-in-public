@@ -366,10 +366,38 @@ This solutions passes all the test cases:
 #(apply hash-map (interleave %1 %2))
 ```
 
+## 62 Re-implement Iterate
+
+```clojure
+(fn my-iterate
+  [f x]
+  (cons x (lazy-seq (my-iterate f (f x)))))
+```
+
+## 63 Group a Sequence
+
+```clojure
+(fn group-sequence [f coll]
+  (reduce
+   (fn [m e] (let [result (f e)]
+               (assoc m result (conj (vec (get m result)) e))))
+   {} coll))
+```
+
 ## 64 Intro to Reduce
 
 ```clojure
 +
+```
+
+## 66 Greatest Common Divisor
+
+```clojure
+(fn gcd
+  [a b]
+  (if (= a b)
+    a
+    (gcd (min a b) (- (max a b) (min a b)))))
 ```
 
 ## 68 Recurring Theme
@@ -390,6 +418,14 @@ count
 reduce +
 ```
 
+## 81 Set Intersection
+
+```clojure
+(fn my-intersection
+  [s1 s2]
+  (set (reverse (filter (into #{} s2) s1))))
+```
+
 ## 83 A Half-Truth
 
 ```clojure
@@ -398,6 +434,27 @@ reduce +
     (every? true? args) false
     (some true? args) true
     :else false))
+```
+
+## 90 Cartesian Product
+
+```clojure
+(fn cartesian-product
+  [coll1 coll2]
+  (into #{} (for [x coll1 y coll2] [x y])))
+```
+
+## 99 Product Digits
+
+```clojure
+(fn [x y] (map #(Character/digit % 10) (seq (str (* x y)))))
+```
+
+## 107 Simple closures
+
+```clojure
+(fn [n]
+  (fn [x] (reduce * (repeat n x))))
 ```
 
 ## 134 A nil key
@@ -430,4 +487,15 @@ reduce +
 
 ```clojure
 1
+```
+
+## 166 Comparisons
+
+```clojure
+(fn comparison
+  [c x y]
+  (cond
+   (c x y) :lt
+   (c y x) :gt
+   :else :eq))
 ```

@@ -137,3 +137,12 @@ Adding an element to a list appears at the end, so it reverses the list
 -   `reduced` lets you break out of reduce early
 -   `lazy-seq` defers the execution of what is in the expression to when it is needed
 -   `realized?` lets you figure out if a function is realized or not
+-   `do` evaluate the expressions in order, and returns the value of the last
+-   `prn` prints to the console
+-   `dotime` will pass a parameter i to a function a n number of times
+-   `merge` merges map, takes the value of the last map if there's a collision
+-   `merge-with` merges maps with a function
+-   `key`, `val` extracts the key and value of a map's element
+-   `partial` takes a function and arguments, returns a new function which calls the original function, with the original arguments, followed by the new arguments passed to the new function
+-   `cond` is like cases in JavaScript, it's a function returning a boolean first, then what we actually return, as many times as we want.
+-   `contains?` checks if a key exists in a map, will be index if it's a vector or a list: `(contains? {:a 1} :a)` => true, and `(contains? '(4 5 6) 1)` => true
