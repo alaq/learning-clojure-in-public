@@ -146,3 +146,6 @@ Adding an element to a list appears at the end, so it reverses the list
 -   `partial` takes a function and arguments, returns a new function which calls the original function, with the original arguments, followed by the new arguments passed to the new function
 -   `cond` is like cases in JavaScript, it's a function returning a boolean first, then what we actually return, as many times as we want.
 -   `contains?` checks if a key exists in a map, will be index if it's a vector or a list: `(contains? {:a 1} :a)` => true, and `(contains? '(4 5 6) 1)` => true
+-   `get-in` is like `get` for a map but will work for nested maps too
+-   `hash-set` creates a set with its arguments
+-   `clojure.string/replace` takes a string, another one (prepended by `#` -- because it's a regex) to be replaced by a last one.
