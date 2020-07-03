@@ -3,6 +3,7 @@
     <img src="https://img.shields.io/badge/Clojure%20from%20the%20Ground%20Up-8%20out%20of%208-green?logo=clojure&style=flat" />
     <img src="https://img.shields.io/badge/4clojure-68%20out%20of%20156-yellow?logo=clojure&style=flat" />
     <img src="https://img.shields.io/badge/Clojure%20For%20Brave%20And%20True-1%20out%20of%2011-red?logo=clojure&style=flat" />
+    <img src="https://img.shields.io/badge/Learn%20Datalog%20Today-7%20out%20of%209-yellow?logo=clojure&style=flat" />
 </p>
 
 # Learning Clojure in Public
@@ -31,3 +32,4 @@ So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo
 | 9    | June 30th, 2020 | [Modeling (continued) (Clojure from the Ground Up Chapter 8)](posts/2020-06-30.md)                |
 | 10   | July 1st, 2020  | [Debugging Clojure (Clojure from the Ground Up Chapter 10 -- last chapter!)](posts/2020-07-01.md) |
 | 11   | July 2nd, 2020  | [Clojure for the Brave and True Chapter 3](posts/2020-07-02.md)                                   |
+| 12   | July 3rd, 2020  | [Learn Datalog Today Chapter 0 through 6 and troubleshooting our fist issue](posts/2020-07-03.md) |
