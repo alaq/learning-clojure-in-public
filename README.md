@@ -34,3 +34,4 @@ So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo
 | 11   | July 2nd, 2020  | [Clojure for the Brave and True Chapter 3](posts/2020-07-02.md)                                   |
 | 12   | July 3rd, 2020  | [Learn Datalog Today Chapter 0 through 6 and troubleshooting our fist issue](posts/2020-07-03.md) |
 | 13   | July 4th, 2020  | [Learn Datalog Today Chapter 7 & 8](posts/2020-07-04.md)                                          |
+| 14   | July 5th, 2020  | [Clojure for the Brave and True, first half of chapter 4](posts/2020-07-05.md)                    |
