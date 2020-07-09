@@ -43,7 +43,8 @@ but also appends an element to a vector or add to a set (they are unordered anyw
 -   `rest` returns everything but the first element, `()` if there are no more element
 -   `next` returns everything but the first element, `nil` if there are no more element
 -   `count` will tell us how big a vector is
--   `sort` will sort a set
+-   `sort` will sort a set in ascending order
+-   `sort-by` takes a **key function** to order the elements
 -   `disj` will remove any element from a set
 -   `contains?` to check if an element is in a set
 -   `set` to create a set from any collection
@@ -75,8 +76,6 @@ but also appends an element to a vector or add to a set (they are unordered anyw
 -   `empty?` returns true if a collection is empty
 -   `cons` will return a list made of the first argument, and all the elements in the second argument
 -   `if` will take a condition, then an expression to evaluate if it's true, and one if it isn't
-
--   `if` will take a condition, then an expression to evaluate if it's true, and one if it isn't
 -   `keyword` takes a string and returns a keyword
 -   `map` takes a function and a sequence, it applies the the function to every member of the sequence. It can also take more sequences, and will take an member from each sequence each time and pass it to the function (which should take these arguments). If one sequence is shorter than others, `map` will stop at the last element of that sequence.
 -   `map-indexed` passes the index first and the element of the sequence to the function it is passed
@@ -86,6 +85,7 @@ but also appends an element to a vector or add to a set (they are unordered anyw
 -   `repeat` returns a sequence where every element is the same, it just takes that member to return
 -   `repeatedly` takes a function and returns a sequence of the result of these calls
 -   `rand` generates a number between 0 and 1
+-   `rand-int` will also take an integer and generate a random number between 0 and that integer minus one.
 -   `range` generates sequences of numbers between two points. With one argument (a number) it generates the sequences between 0 and that number. With two numbers as arguments, it will be between these two numbers. The last argument (optional) is the step.
 -   `cycle` extends a sequence by repeating it forever. Here as well you can limit it with `take`
 -   `concat` concatenate sequences together
@@ -149,3 +149,16 @@ Adding an element to a list appears at the end, so it reverses the list
 -   `get-in` is like `get` for a map but will work for nested maps too
 -   `hash-set` creates a set with its arguments
 -   `clojure.string/replace` takes a string, another one (prepended by `#` -- because it's a regex) to be replaced by a last one.
+-   `time` adds a log line with the time it took for the expression to run, and then returns the rest of the enclosed expressions
+-   `apply` explodes a sequence passed as argument and transforms it into rest arguments, like so `(apply max [0 1 2])` => `2`
+-   `complement`
+-   `comp` takes function and returns a new anonymous function that is the function composition of them. `((comp inc *) 2 3)`
+-   `memoize` saves the arguments and the return of a function, so when you evaluate the function with the same arguments again the result is returned immediately
+-   `assoc-in` lets you add to nested maps, such as `(assoc-in {} [:cookie :monster :vocals] "Finntroll"); => {:cookie {:monster {:vocals "Finntroll"}}}`
+-   `if-let` makes is so that if an expression is truthy, you bind that name to the result of that expression.
+-   `doseq` is used when you want to perform side-effect operations. The first element is a vector that tells you how to attribute each element.
+-   `ns-name` returns the name of a namespace
+-   `ns-interns` returns the interned vars and `ns-map` will return the full namespace map
+-   `refer` lets you merge another namespace with the current (well not really merge but the symbols from the other namespace are brought it)
+-   `alias` lets you shorten a namespace name like so `(clojure.core/alias 'taxonomy 'cheese.taxonomy)`
+-   `zipmap` creates a map from two vectors, the first vector gives the first part (the keyword most likely), and the second vector gives the elements

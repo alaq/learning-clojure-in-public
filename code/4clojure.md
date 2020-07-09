@@ -485,6 +485,19 @@ java.lang.Class
   (=  (get mp ky :not-here) nil))
 ```
 
+## 135. Infix Calculator
+
+```clojure
+(fn infix
+  [& xs]
+  (reduce
+    (fn [acc e]
+      (if (fn? e)
+        (partial e acc)
+        (acc e)))
+    (partial + 0) xs))
+```
+
 ## 143. dot product
 
 ```clojure
@@ -504,6 +517,13 @@ java.lang.Class
 ```clojure
 (fn [default xs]
   	(reduce (fn [v x] (into v [[x default]])) {} xs))
+```
+
+## 157. Indexing Sequences
+
+```clojure
+(fn indexing-sequences [xs]
+  (map-indexed (fn [i e] [e i]) xs))
 ```
 
 ## 161 Subset and Superset
