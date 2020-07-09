@@ -436,6 +436,14 @@ reduce +
     :else false))
 ```
 
+## 88. Symmetric Difference
+
+```clojure
+(fn symmetric-difference
+  [s1 s2]
+  (clojure.set/union (clojure.set/difference s1 s2) (clojure.set/difference s2 s1)))
+```
+
 ## 90 Cartesian Product
 
 ```clojure
@@ -457,11 +465,32 @@ reduce +
   (fn [x] (reduce * (repeat n x))))
 ```
 
+## 122. Read a binary number
+
+```clojure
+(fn [binary]
+  (apply + (map-indexed (fn [i e] (int (* e (Math/pow 2 i)))) (map #(Character/digit % 10) (reverse (seq binary))))))
+```
+
+### 126. Through the Looking Glass
+
+```clojure
+java.lang.Class
+```
+
 ## 134 A nil key
 
 ```clojure
 (fn [ky mp]
   (=  (get mp ky :not-here) nil))
+```
+
+## 143. dot product
+
+```clojure
+(fn dot-product
+  [v1 v2]
+  (apply + (map-indexed (fn [i e] (* e (get v2 i))) v1)))
 ```
 
 ## 145 For the win

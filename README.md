@@ -37,3 +37,4 @@ So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo
 | 14   | July 5th, 2020  | [Clojure for the Brave and True, first half of chapter 4](posts/2020-07-05.md)                                                     |
 | 15   | July 6th, 2020  | [Brave Clojure, second half of chapter 4 and its exercises: lazy seq, collection abstraction](posts/2020-07-06.md)                 |
 | 16   | July 7th, 2020  | [Functional Programming with Brave Clojure, Chapter 5 and its exercises, also opening our first PR in Athens](posts/2020-07-07.md) |
+| 17   | July 8th, 2020  | [Namespaces and organizing a project](posts/2020-07-08.md)                                                                         |
