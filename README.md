@@ -1,8 +1,8 @@
 <p align="center">
     <img src="posts/images/Clojure_logo.svg" /><br /><br />
     <img src="https://img.shields.io/badge/Clojure%20from%20the%20Ground%20Up-8%20out%20of%208-green?logo=clojure&style=flat" />
-    <img src="https://img.shields.io/badge/4clojure-68%20out%20of%20156-orange?logo=clojure&style=flat" />
-    <img src="https://img.shields.io/badge/Clojure%20For%20Brave%20And%20True-3%20out%20of%2011-red?logo=clojure&style=flat" />
+    <img src="https://img.shields.io/badge/4clojure-75%20out%20of%20156-orange?logo=clojure&style=flat" />
+    <img src="https://img.shields.io/badge/Clojure%20For%20Brave%20And%20True-6%20out%20of%2011-orange?logo=clojure&style=flat" />
     <img src="https://img.shields.io/badge/Learn%20Datalog%20Today-9%20out%20of%209-green?logo=clojure&style=flat" />
 </p>
 
@@ -39,3 +39,4 @@ So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo
 | 16   | July 7th, 2020  | [Functional Programming with Brave Clojure, Chapter 5 and its exercises, also opening our first PR in Athens](posts/2020-07-07.md)      |
 | 17   | July 8th, 2020  | [Namespaces and organizing a project](posts/2020-07-08.md)                                                                              |
 | 18   | July 9th, 2020  | [Reading and evaluating in Clojure (Brave Clojure, Chapter 7), and Reagent the minilistic React for ClojureScript](posts/2020-07-09.md) |
+| 19   | July 10th, 2020 | [Writing macros (Brave Clojure, Chapter 8) and Pascal Triangle problem](posts/2020-07-10.md)                                            |

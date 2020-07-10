@@ -452,6 +452,19 @@ reduce +
   (into #{} (for [x coll1 y coll2] [x y])))
 ```
 
+## 97. Pascal's Triangle
+
+```clojure
+(fn pascal [n]
+  (if (= n 1)
+    [1]
+    (last (take (dec n) (iterate (fn [xs]
+                                   (concat
+                                    (conj (map + (butlast xs) (rest xs)) 1)
+                                    '(1)))
+                                 [1 1])))))
+```
+
 ## 99 Product Digits
 
 ```clojure
