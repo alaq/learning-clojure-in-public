@@ -40,3 +40,4 @@ So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo
 | 17   | July 8th, 2020  | [Namespaces and organizing a project](posts/2020-07-08.md)                                                                              |
 | 18   | July 9th, 2020  | [Reading and evaluating in Clojure (Brave Clojure, Chapter 7), and Reagent the minilistic React for ClojureScript](posts/2020-07-09.md) |
 | 19   | July 10th, 2020 | [Writing macros (Brave Clojure, Chapter 8) and Pascal Triangle problem](posts/2020-07-10.md)                                            |
+| 20   | July 11th, 2020 | [Concurrency in Clojure (Brave Clojure, Chapter 9)](posts/2020-07-11.md)                                                                |

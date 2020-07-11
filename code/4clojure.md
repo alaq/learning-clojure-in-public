@@ -452,6 +452,16 @@ reduce +
   (into #{} (for [x coll1 y coll2] [x y])))
 ```
 
+## 93. To tree, or not to tree?
+
+```clojure
+(fn tree? [xs]
+  (cond
+   (or (seq? xs) (vector? xs)) (and (= 3 (count xs)) (tree? (nth xs 1)) (tree? (nth xs 2)))
+   (nil? xs) true
+   :else false))
+```
+
 ## 97. Pascal's Triangle
 
 ```clojure
