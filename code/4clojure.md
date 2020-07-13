@@ -488,6 +488,26 @@ reduce +
   (fn [x] (reduce * (repeat n x))))
 ```
 
+## 118. Reimplement Map
+
+```clojure
+(fn my-map
+  [f coll]
+  (if (empty? coll)
+    nil
+    (lazy-seq (cons (f (first coll)) (my-map f (rest coll))))))
+```
+
+## 120. Sum of square of digits
+
+```clojure
+(fn sum-of-sq-digits
+  [coll]
+  (let [digits (fn [n] (map #(- (int %) 48) (str n)))
+        squared-component-digits (fn [digits] (reduce + (map #(* % %) digits)))]
+        (count (filter #(< % (squared-component-digits (digits %))) coll))))
+```
+
 ## 122. Read a binary number
 
 ```clojure
@@ -499,6 +519,15 @@ reduce +
 
 ```clojure
 java.lang.Class
+```
+
+## 128. Recognizing playing cards
+
+```clojure
+(fn recognize [card]
+  (let [get-suit (fn [c] ((zipmap (map str "SHDC") [:spade :heart :diamond :club]) (str (first card))))
+        get-rank (fn [c] ((zipmap (map str "23456789TJQKA") (range 13)) (str (last card))))]
+    {:suit (get-suit card) :rank (get-rank card)}))
 ```
 
 ## 134 A nil key
