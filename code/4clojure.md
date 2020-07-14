@@ -481,6 +481,14 @@ reduce +
 (fn [x y] (map #(Character/digit % 10) (seq (str (* x y)))))
 ```
 
+### 100. Least Common Multiple
+
+```clojure
+(fn [& nums]
+  (letfn [(gcd [a b] (if (= a b) a (gcd (min a b) (- (max a b) (min a b)))))]
+  (/ (reduce * nums) (reduce gcd nums))))
+```
+
 ## 107 Simple closures
 
 ```clojure
@@ -599,4 +607,10 @@ java.lang.Class
    (c x y) :lt
    (c y x) :gt
    :else :eq))
+```
+
+## 173. Intro to Destructuring 2
+
+```clojure
+f xs
 ```

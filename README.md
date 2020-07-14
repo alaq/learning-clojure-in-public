@@ -42,3 +42,4 @@ So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo
 | 19   | July 10th, 2020 | [Writing macros (Brave Clojure, Chapter 8) and Pascal Triangle problem](posts/2020-07-10.md)                                            |
 | 20   | July 11th, 2020 | [Concurrency in Clojure (Brave Clojure, Chapter 9)](posts/2020-07-11.md)                                                                |
 | 21   | July 12th, 2020 | [Concurrency in Clojure (Brave Clojure, Chapter 9), and three 4clojure problems](posts/2020-07-12.md)                                   |
+| 22   | July 13th, 2020 | [State in Clojure (Brave Clojure, Chapter 10), and two 4clojure problems](posts/2020-07-13.md)                                          |
