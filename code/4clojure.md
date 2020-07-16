@@ -323,6 +323,14 @@ This solutions passes all the test cases:
 '(1 4 7 10 13)
 ```
 
+## 46. Flipping Out
+
+```clojure
+(fn [f]
+  (fn [& args]
+    (apply f (reverse args))))
+```
+
 ## 47 Contain Yourself
 
 ```clojure
@@ -462,6 +470,13 @@ reduce +
    :else false))
 ```
 
+## 96. Beauty is Symmetry
+
+```clojure
+(fn symmetric? [tree]
+  (= tree ((fn mirror [t] (when t [(first t) (mirror (last t)) (mirror (second t))])) tree)))
+```
+
 ## 97. Pascal's Triangle
 
 ```clojure
@@ -570,6 +585,27 @@ java.lang.Class
 
 ```clojure
 '(1 5 9 13 17 21 25 29 33 37)
+```
+
+## 146. Trees into tables
+
+```clojure
+#(into {} (for [[k v] % [k2 v2] v] [[k k2] v2]))
+```
+
+## 147. Pascal Trapezoid
+
+```clojure
+(fn pascal-trapezoid [v]
+  (iterate (fn [x] (vec (map +' (conj x 0) (concat [0] x)))) v))
+```
+
+### 153. Pairwise Disjoint Sets
+
+```clojure
+(fn [sets]
+  (= (reduce + (map count sets))
+     (count (reduce clojure.set/union sets))))
 ```
 
 ## 156 Map Defaults
