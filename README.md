@@ -2,7 +2,7 @@
     <img src="posts/images/Clojure_logo.svg" /><br /><br />
     <img src="https://img.shields.io/badge/Clojure%20from%20the%20Ground%20Up-8%20out%20of%208-green?logo=clojure&style=flat" />
     <img src="https://img.shields.io/badge/4clojure-86%20out%20of%20100-orange?logo=clojure&style=flat" />
-    <img src="https://img.shields.io/badge/Clojure%20For%20Brave%20And%20True-9%20out%20of%2011-orange?logo=clojure&style=flat" />
+    <img src="https://img.shields.io/badge/Clojure%20For%20Brave%20And%20True-10%20out%20of%2011-orange?logo=clojure&style=flat" />
     <img src="https://img.shields.io/badge/Learn%20Datalog%20Today-9%20out%20of%209-green?logo=clojure&style=flat" />
 </p>
 
@@ -45,3 +45,4 @@ So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo
 | 22   | July 13th, 2020 | [State in Clojure (Brave Clojure, Chapter 10), and two 4clojure problems](posts/2020-07-13.md)                                          |
 | 23   | July 14th, 2020 | [State in Clojure (End of Brave Clojure, Chapter 10 and exercises)](posts/2020-07-14.md)                                                |
 | 24   | July 15th, 2020 | [clojure.core.async (Brave Clojure, Chapter 11)](posts/2020-07-15.md)                                                                   |
+| 25   | July 16th, 2020 | [JVM and Java interop (Brave Clojure, Chapter 12), working on issue 126](posts/2020-07-16.md)                                           |
