@@ -49,3 +49,4 @@ So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo
 | 26   | July 17th, 2020 | [Creating and extending Clojure abstractions (Brave Clojure, Chapter 13), learning re-frame, working on issue 126](posts/2020-07-17.md) |
 | 27   | July 18th, 2020 | [re-frame building blocks, working on issue 126](posts/2020-07-18.md)                                                                   |
 | 28   | July 19th, 2020 | [Building a decide-wheel clone with re-frame](posts/2020-07-19.md)                                                                      |
+| 29   | July 20th, 2020 | [Styling and animating the decide-wheel clone, looking into our third issue](posts/2020-07-20.md)                                       |
