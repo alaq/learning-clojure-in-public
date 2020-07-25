@@ -54,3 +54,4 @@ So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo
 | 31   | July 22th, 2020 | [Page deletion in Athens](posts/2020-07-22.md)                                                                                          |
 | 32   | July 23th, 2020 | [Implementing Filtering in Athens](posts/2020-07-23.md)                                                                                 |
 | 33   | July 24th, 2020 | [Fixing slash command scrolling in Athens, and bike-shedding hail the wheel](posts/2020-07-24.md)                                       |
+| 34   | July 25th, 2020 | [Finishing the PR for slash command scrolling in Athens](posts/2020-07-25.md)                                                           |
