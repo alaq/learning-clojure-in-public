@@ -317,6 +317,14 @@ This solutions passes all the test cases:
   (reduce * (range 1 (inc n))))
 ```
 
+## 44. Rotate Sequence
+
+```clojure
+(fn my-rotate [n coll]
+  (let [n (mod n (count coll))]
+    (concat (drop n coll) (take n coll))))
+```
+
 ## 45 Intro to iterate
 
 ```clojure
