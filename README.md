@@ -1,7 +1,7 @@
 <p align="center">
     <img src="posts/images/Clojure_logo.svg" /><br /><br />
     <img src="https://img.shields.io/badge/Clojure%20from%20the%20Ground%20Up-8%20out%20of%208-green?logo=clojure&style=flat" />
-    <img src="https://img.shields.io/badge/4clojure-86%20out%20of%20100-orange?logo=clojure&style=flat" />
+    <img src="https://img.shields.io/badge/4clojure-87%20out%20of%20100-orange?logo=clojure&style=flat" />
     <img src="https://img.shields.io/badge/Clojure%20For%20Brave%20And%20True-11%20out%20of%2011-orange?logo=clojure&style=flat" />
     <img src="https://img.shields.io/badge/Learn%20Datalog%20Today-9%20out%20of%209-green?logo=clojure&style=flat" />
 </p>
@@ -55,3 +55,4 @@ So here it goes: if I miss a day, you will be able ask me to send you \$5 (Venmo
 | 32   | July 23th, 2020 | [Implementing Filtering in Athens](posts/2020-07-23.md)                                                                                 |
 | 33   | July 24th, 2020 | [Fixing slash command scrolling in Athens, and bike-shedding hail the wheel](posts/2020-07-24.md)                                       |
 | 34   | July 25th, 2020 | [Finishing the PR for slash command scrolling in Athens](posts/2020-07-25.md)                                                           |
+| 35   | July 26th, 2020 | [Working on filters and 4clojure's 44th problem](posts/2020-07-26.md)                                                                   |
