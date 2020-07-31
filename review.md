@@ -1,4 +1,4 @@
-# ClojureFam: how to make it better, and my advice to new learners {{word-count}}
+# ClojureFam: how to make it better, and my advice to new learners
 
 ## What is ClojureFam
 
@@ -6,7 +6,7 @@ ClojureFam is a learning program for Clojure(script). Learners are put in groups
 
 The team behind sees a lot more happening with it. I particularly like the idea of an open-source lambda school.
 
-https://twitter.com/nthd3gr33/status/1271440693806788608?s=21
+![](./posts/images/open-source-lambda.png)
 
 So over the past 5 weeks, I have gone through the program. On top of it I committed to learning in public, as in post what I have learned or done that day (everyday) in a markdown file and host it in this very repository. Additionally I tweeted a daily (and much shorter) update with a link to the post.
 
