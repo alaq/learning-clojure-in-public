@@ -117,11 +117,7 @@ The goal for me now is to turn my learning in public experience into a building 
 In true 20/80 fashion I will leave you with a few easily doable action points:
 
 -   [ ] Improve landing page - it should answer questions as to how to get started (part of it is making the chosen curriculum more obvious, and stricter). In that landing page there should be a "Getting Started" section. We see these questions pop up at every start of every new cohort.
-
 -   [ ] Remove some unnecessary chapters from the curriculum, they can always be tackled after ClojureFam
-
 -   [ ] Turn the current curriculum into a tree shaped one
-
 -   [ ] Move onboarding for new clojurians to the clojurefam repository
-
 -   [ ] create a learn-in-public channel on Discord
