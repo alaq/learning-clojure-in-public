@@ -8,6 +8,8 @@
 
 # Learning Clojure in Public
 
+Note: My challenge is now over, you can read my thoughts on ClojureFam and my advice to new learners [here](./review.md).
+
 I am challenging myself to learn Clojure in public. Starting on July 22nd, 2020 and for the next five weeks I will be learning Clojure in public and you can hold me accountable. I am committing the code I am writing to the `./code` folder, and will also write daily posts detailing what I learned and what I did to learn it.
 
 If you would like to read why I am doing this, read the [introduction](posts/2020-06-18.md).
